@@ -1,20 +1,19 @@
-module 0x04fdf105567e4010dc62622231b16cda0efc3b68e020d2ceed3ec08f9c5db64b::test_user_management {
-    use aptos_framework::test_helpers::{create_signer_account}; // Adjust based on actual module structure
-    use aptos_framework::signer;
-    use 0x04fdf105567e4010dc62622231b16cda0efc3b68e020d2ceed3ec08f9c5db64b::UserManagement;
+module 0x0416f59263fa4f4c52cfa45b89fcb47fa2eebef78cfda644bb3b8a19f0a4f3c6::test_UserManagement {
+    use aptos_std::signer;
+    use HabitTerritories::UserManagement;
 
     // Test function to check user management initialization
-    public fun test_initialize_user() {
-        let account = create_signer_account(); // Use correct helper function to create a signer account
-        UserManagement::initialize_user(&account);
-        assert!(UserManagement::is_registered(signer::address_of(&account)), 0x3); // Should pass if registered
+    public fun test_initialize_user(account: &signer) {
+        UserManagement::initialize_user(account);
+        assert!(UserManagement::is_registered(signer::address_of(account)), 0x3); // Should pass if registered
     }
 
     // Test function to check user unregistration
-    public fun test_unregister_user() {
-        let account = create_signer_account();
-        UserManagement::initialize_user(&account);
-        UserManagement::unregister_user(&account);
-        assert!(!UserManagement::is_registered(signer::address_of(&account)), 0x4); // Should pass if unregistered
+    public fun test_unregister_user(account: &signer) {
+        UserManagement::initialize_user(account);
+        UserManagement::unregister_user(account);
+        assert!(!UserManagement::is_registered(signer::address_of(account)), 0x4); // Should pass if unregistered
     }
 }
+
+// The issues you are facing arise because the signer module in aptos_std doesn’t contain a struct called Signer or a function called create_signer. Instead, the signer type and associated functionality in Aptos are built-in features, and signer itself is a type, not a module

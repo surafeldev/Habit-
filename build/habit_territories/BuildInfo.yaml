@@ -3,7 +3,7 @@ compiled_package_info:
   package_name: habit_territories
   address_alias_instantiation:
     Extensions: "0000000000000000000000000000000000000000000000000000000000000001"
-    HabitTerritories: 04fdf105567e4010dc62622231b16cda0efc3b68e020d2ceed3ec08f9c5db64b
+    HabitTerritories: 0416f59263fa4f4c52cfa45b89fcb47fa2eebef78cfda644bb3b8a19f0a4f3c6
     aptos_framework: "0000000000000000000000000000000000000000000000000000000000000001"
     aptos_fungible_asset: 000000000000000000000000000000000000000000000000000000000000000a
     aptos_std: "0000000000000000000000000000000000000000000000000000000000000001"
@@ -12,10 +12,10 @@ compiled_package_info:
     std: "0000000000000000000000000000000000000000000000000000000000000001"
     vm: "0000000000000000000000000000000000000000000000000000000000000000"
     vm_reserved: "0000000000000000000000000000000000000000000000000000000000000000"
-  source_digest: 4EC553AD48ADCDE9C93F3870655873F88F10CD77432907B4D4F077FAA094337B
+  source_digest: DF11A3A5CFFF353CD004270BEDDA556F63A6D1D9D6B5D9F0459BE9ED0C46F621
   build_flags:
-    dev_mode: false
-    test_mode: false
+    dev_mode: true
+    test_mode: true
     override_std: ~
     generate_docs: false
     generate_abis: false
@@ -28,7 +28,7 @@ compiled_package_info:
     fetch_deps_only: false
     skip_fetch_latest_git_deps: false
     compiler_config:
-      bytecode_version: 6
+      bytecode_version: ~
       known_attributes:
         - bytecode_instruction
         - deprecated

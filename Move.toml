@@ -3,9 +3,9 @@ name = "habit_territories"
 version = "0.0.1"
 
 [dependencies]
-AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework", rev = "main" }
-AptosStdlib = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-stdlib", rev = "main" }
+AptosFramework = { local = "C:\\Users\\suraf\\Documents\\Aptos-projects\\Habit-\\aptos-core\\aptos-move\\framework\\aptos-framework" }
+AptosStdlib = { local = "C:\\Users\\suraf\\Documents\\Aptos-projects\\Habit-\\aptos-core\\aptos-move\\framework\\aptos-stdlib" }
+MoveStdlib = { local = "C:\\Users\\suraf\\Documents\\Aptos-projects\\Habit-\\aptos-core\\aptos-move\\framework\\move-stdlib" }
 
 [addresses]
-HabitTerritories = "0x04fdf105567e4010dc62622231b16cda0efc3b68e020d2ceed3ec08f9c5db64b"  # Replace "0x1" with a specific address when deploying
-
+HabitTerritories = "0x0416f59263fa4f4c52cfa45b89fcb47fa2eebef78cfda644bb3b8a19f0a4f3c6"  # Replace "0x1" with a specific address when deploying
